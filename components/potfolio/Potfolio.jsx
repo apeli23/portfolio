@@ -52,6 +52,7 @@ export default function Potfolio() {
       <ul>
         {list.map((item) => (
           <PotfolioList
+            key={item.id}
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}
@@ -61,7 +62,7 @@ export default function Potfolio() {
       </ul>
       <div className="container">
         {data.map((d) => (
-          <a href={d.link}>
+          <a key={d.id} href={d.link}>
             <div className="item">
               <img src={d.img} alt="" />
               <h3>{d.title}</h3>

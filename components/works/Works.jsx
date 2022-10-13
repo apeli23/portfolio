@@ -43,7 +43,8 @@ export default function Works() {
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         {data.map((d) => (
-          <a href={d.link} className="link">
+          
+          <a href={d.link} key={d.id} className="link">
             <div className="container">
               <div className="item">
                 <div className="left">
